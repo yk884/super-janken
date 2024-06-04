@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  
+  .game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .scores p {
+    font-size: 1.2em;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .choice-image {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .choice-image:hover {
+    transform: scale(1.2);
+  }
+  
+  .result p {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .computer-choice {
+    margin-top: 20px;
+  }
+  
+  .header-title{
+    margin-top: 0;
+    background-color: #4a7fcf;
+    text-align: left;
+    padding: 8px 15px;
+    color: #fff;
+  }
+  .start-choices{
+    margin-top: 60px;
+  }
+  .start-choices img{
+    width: 100px;
+  }
+  .start-button{
+    margin-top: 60px;
+    background-color: #006aff;
+    border: none;
+    border-radius: 6px;
+    width: 180px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor:pointer;
+  }
