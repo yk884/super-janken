@@ -6,6 +6,7 @@ const images: { [key: string]: string } = {
   rock: "/assets/rock.png",
   paper: "/assets/paper.png",
   scissors: "/assets/scissors.png",
+  question: "/assets/question.png", // question.pngのパスを追加
 };
 
 const JankenGame: React.FC = () => {
@@ -17,6 +18,10 @@ const JankenGame: React.FC = () => {
 
   useEffect(() => {
     if (playerChoice) {
+      // determineWinnerの処理が始まるときにquestion.pngに設定
+      if (computerChoice !== "question") {
+        setComputerChoice("question");
+      }
       setTimeout(() => {
         determineWinner();
       }, 1000);
@@ -66,16 +71,14 @@ const JankenGame: React.FC = () => {
       <div className="result">
         <p>{result}</p>
       </div>
-      {computerChoice && (
-        <div className="computer-choice">
-          <p>コンピューター</p>
-          <img
-            src={images[computerChoice]}
-            alt={computerChoice}
-            className="choice-image"
-          />
-        </div>
-      )}
+      <div className="computer-choice">
+        <p>コンピューター</p>
+        <img
+          src={images[computerChoice || "question"]}
+          alt={computerChoice || "question"}
+          className="choice-image"
+        />
+      </div>
     </div>
   );
 };
